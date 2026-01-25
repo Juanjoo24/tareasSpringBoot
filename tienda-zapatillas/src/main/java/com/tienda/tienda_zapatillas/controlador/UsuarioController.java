@@ -1,9 +1,10 @@
+package com.tienda.tienda_zapatillas.controlador;
+import com.tienda.tienda_zapatillas.model.Usuario;
+import com.tienda.tienda_zapatillas.service.UsuarioService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
-
-import com.tienda.tienda_zapatillas.service.UsuarioService;
 
 import jakarta.validation.Valid;
 

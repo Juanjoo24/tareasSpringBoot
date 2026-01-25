@@ -1,5 +1,4 @@
 package com.tienda.tienda_zapatillas.model;
-package com.tienda.tienda_zapatillas.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Email;

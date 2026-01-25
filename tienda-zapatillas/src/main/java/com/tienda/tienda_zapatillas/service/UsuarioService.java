@@ -16,18 +16,22 @@ public class UsuarioService {
         this.repository = repository;
     }
 
+    // Listar todos los usuarios
     public List<Usuario> listar() {
         return repository.findAll();
     }
 
-    public void guardar(Usuario usuario) {
-        repository.save(usuario);
+    // Guardar o actualizar un usuario
+    public Usuario guardar(Usuario usuario) {
+        return repository.save(usuario);
     }
 
+    // Obtener un usuario por id
     public Optional<Usuario> obtener(Long id) {
         return repository.findById(id);
     }
 
+    // Eliminar un usuario por id
     public void eliminar(Long id) {
         repository.deleteById(id);
     }
