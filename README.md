@@ -22,21 +22,34 @@ Explica brevemente cómo has organizado:
 
 ## 5) Configuración de la base de datos
 ### 5.1 Dependencias añadidas
-(Indica la dependencia del driver que has usado)
-
+<dependency>
+  <groupId>com.mysql</groupId>
+  <artifactId>mysql-connector-j</artifactId>
+  <scope>runtime</scope>
+</dependency>
+<dependency>
+  <groupId>org.springframework.boot</groupId>
+  <artifactId>spring-boot-starter-data-jpa</artifactId>
+</dependency>
 ### 5.2 application.properties / application.yml
-(Pega aquí tu configuración SIN contraseñas reales si es necesario)
+spring.datasource.url=jdbc:mysql://localhost:3306/tienda_zapatilla
+spring.datasource.username=root
+spring.datasource.password=
+
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
+
+spring.jpa.show-sql=true
+spring.jpa.properties.hibernate.format_sql=true
 
 ### 5.3 Pasos para crear la BD (si aplica)
-- MySQL: CREATE DATABASE ...
-- PostgreSQL: createdb ...
-
+- MySQL:CREATE DATABASE tienda_zapatilla;
 ## 6) Cómo ejecutar el proyecto
 1. Requisitos (Java versión, Maven/Gradle, DB instalada si aplica)
 2. Comando de arranque:
    - ./mvnw spring-boot:run   (o equivalente)
 3. URL de acceso:
-   - http://localhost:8080/...
+   - http://localhost:8080/zapatillas
 
 ## 7) Pantallas / Rutas MVC
 - GET /entidad (listar)
