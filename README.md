@@ -17,7 +17,7 @@ Explica brevemente cómo has organizado:
 
 ## 4) Base de datos elegida (marca una)
 - [ ] H2
-- [ ] MySQL
+- [x] MySQL
 - [ ] PostgreSQL
 
 ## 5) Configuración de la base de datos
