@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Zapatillas</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<h1>Lista de Zapatillas</h1>
+
+<!-- Botón para crear nueva zapatilla -->
+<a th:href="@{/zapatillas/formulario}">➕ Nueva Zapatilla</a>
+
+<!-- Tabla de zapatillas -->
+<table border="1">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th>Precio</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Iteramos sobre la lista de zapatillas -->
+        <tr th:each="z : ${listaZapatillas}">
+            <td th:text="${z.id}"></td>
+            <td th:text="${z.marca}"></td>
+            <td th:text="${z.modelo}"></td>
+            <td th:text="${z.precio}"></td>
+            <td>
+                <a th:href="@{/zapatillas/{id}(id=${z.id})}">Ver</a> |
+                <a th:href="@{/zapatillas/{id}/editar(id=${z.id})}">Editar</a> |
+                <a th:href="@{/zapatillas/{id}/eliminar(id=${z.id})}" 
+                   onclick="return confirm('¿Seguro que deseas eliminar?')">Eliminar</a>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+</body>
+</html>

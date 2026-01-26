@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle Zapatilla</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+<h1>Detalle de Zapatilla</h1>
+
+<p><strong>ID:</strong> <span th:text="${zapatilla.id}"></span></p>
+<p><strong>Marca:</strong> <span th:text="${zapatilla.marca}"></span></p>
+<p><strong>Modelo:</strong> <span th:text="${zapatilla.modelo}"></span></p>
+<p><strong>Precio:</strong> $<span th:text="${zapatilla.precio}"></span></p>
+
+<a th:href="@{/zapatillas}">🔙 Volver al listado</a> |
+<a th:href="@{/zapatillas/{id}/editar(id=${zapatilla.id})}">✏️ Editar</a> |
+<a th:href="@{/zapatillas/{id}/eliminar(id=${zapatilla.id})}" 
+   onclick="return confirm('¿Seguro que deseas eliminar?')">🗑️ Eliminar</a>
+
+</body>
+</html>
