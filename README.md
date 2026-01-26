@@ -52,9 +52,9 @@ spring.jpa.properties.hibernate.format_sql=true
    - http://localhost:8080/zapatillas
 
 ## 7) Pantallas / Rutas MVC
-- GET /entidad (listar)
-- GET /entidad/nuevo (formulario alta)
-- POST /entidad (crear)
+- GET /zapatillas (listar)
+- GET /zapatillas/formulario (formulario alta)
+- POST /zapatillas (crear)
 - GET /entidad/{id}/editar (editar)
 - POST /entidad/{id} (actualizar)
 - POST /entidad/{id}/borrar (eliminar)
