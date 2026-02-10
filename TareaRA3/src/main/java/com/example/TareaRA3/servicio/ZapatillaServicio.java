@@ -2,9 +2,12 @@ package com.example.TareaRA3.servicio;
 
 import java.util.List; 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
 import com.example.TareaRA3.modelo.Zapatilla;
 import com.example.TareaRA3.repositorio.ZapatillaRepositorio;
 
+@Service
 public class ZapatillaServicio {
 
     @Autowired
